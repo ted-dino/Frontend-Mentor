@@ -1,3 +1,0 @@
-svg
-border
-difference between * and body
