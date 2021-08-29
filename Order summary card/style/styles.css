@@ -120,15 +120,6 @@ span{
   font-weight: 900;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
 /* pseudo-class */
 .plan a:hover{
   color: hsl(224, 23%, 55%);
