@@ -1,0 +1,158 @@
+*{
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url(../images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: hsl(225, 100%, 94%);
+  text-align: center;
+}
+
+
+span{
+  display:block;
+}
+
+.container{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+
+}
+
+.container img{
+  border-radius: 20px 20px 0 0;
+  display: block;
+}
+
+.card-text{
+  background-color: #FFFFFF;
+  border-radius: 0 0 20px 20px;
+  height: 450px;
+}
+
+.card-text h3{
+  margin: 0;
+  padding-top: 30px;
+  font-weight: 900;
+  font-size: 30px;
+  color: hsl(223, 47%, 23%);
+}
+
+.card-text p{
+  color: #8F92A6;
+}
+
+
+.plan {
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 10px;
+  margin: auto;
+  width: 355px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plan img{
+  width: auto;
+  height: auto;
+}
+
+.plan a{
+  color:  hsl(245, 75%, 52%);
+  font-weight: 900;
+  font-size: 0.90rem;
+}
+
+.plan p{
+  width: 165px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.plan-text{
+  color: hsl(223, 47%, 23%);
+  font-weight: 700;
+}
+
+.plan-price{
+  color: #9498B2;
+}
+
+.card-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 120px;
+  margin-top: 25px;
+}
+
+.card-buttons button{
+  width: 355px;
+  height: 50px;
+}
+
+.payment{
+  color: #ffffff;
+  background-color: hsl(245, 75%, 52%);
+  font-size: 16px;
+  font-weight: 700;
+  border-width: 0;
+  border-radius: 10px;
+  box-shadow: 0px 19px 38px #D6D3FF;
+  margin-bottom: 10px;
+}
+
+.cancel{
+  border: none;
+  background-color: transparent;
+  color: #8F92A6;
+  font-weight: 900;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* pseudo-class */
+.plan a:hover{
+  color: hsl(224, 23%, 55%);
+}
+.payment:hover{
+  background-color: hsl(223, 47%, 23%);
+}
+
+.cancel:hover{
+  color: hsl(223, 47%, 23%);
+}
+
+@media (max-width: 375px) { 
+  .container, img{
+    width: 330px;
+  }
+
+  .plan{
+    width: 270px;
+    padding: 0 15px;
+  }
+
+  .card-buttons button{
+    width: 280px;
+  }
+
+}
