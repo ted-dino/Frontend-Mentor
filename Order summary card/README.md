@@ -11,7 +11,6 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-- [Author](#author)
 
 ## Overview
 
@@ -41,7 +40,3 @@ Users should be able to:
 ### What I learned
 
 By doing this challenge, I learned more about SVG, border and the difference between * and body.
-
-## Author
-
-- Frontend Mentor - [Ted Dino](https://www.frontendmentor.io/profile/ted-dino)
