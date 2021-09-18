@@ -13,90 +13,36 @@
   --big-shoulders-display: "Big Shoulders Display", cursive;
 }
 
-body {
+*, 
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10% 18%;
   flex-direction: row;
-  border-radius: 15px;
-  overflow: hidden;
+  flex-wrap: wrap;
 }
 
-.container :is(.sedan, .suv, .luxury){
-  padding: 40px;
-  height: 100%;
+.card-container{
+  width: 300px;
+  border: 2px solid limegreen;
+  max-width: 500px;
 }
 
-.container h1{
-  text-transform: uppercase;
-  font-family: var(--big-shoulders-display);
-  color: var(--color-content);
-}
-
-.container p{
-  font-family: var(--lexend-deca);
-  font-size: 15px;
-  color: var(--paragraph);
-  margin-bottom: 100px;
-  padding-right: 20px;
-}
-
-.container a{
-  margin-top: 20px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-family: var(--lexend-deca);
-  padding: 10px 15px;
-  background-color: var(--color-content);
-  border: 2px solid var(--color-content);
-  border-radius: 20px;
-}
-
-.container a:hover{
-  color: var(--paragraph);
-  background-color: transparent;
-}
-
-.sedan {
+.sedan{
   background-color: var(--bright-orange);
 }
-.sedan a{
-  color: var(--bright-orange);
-}
-.suv {
-  background-color: var(--dark-cyan);
-}
-.suv a{
-  color: var(--dark-cyan);
-}
-.luxury {
-  background-color: var(--darker-cyan);
-}
-.luxury a{
-  color: var(--darker-cyan);
-}
 
-@media (max-width: 1024px){
-  .container{
-    max-width: 444px;
-    margin: 25% 5%;
-    flex-direction: column;
-    border-radius: 15px;
-    overflow: hidden;
-  }
-  .container :is(.sedan, .suv, .luxury){
-    height: 300px;
-  }
-
-  .container p{
-    margin-bottom: 50px;
-  }
-
-}
