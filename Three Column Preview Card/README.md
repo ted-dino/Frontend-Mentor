@@ -4,7 +4,7 @@ This is a solution to the [3-column preview card component challenge on Frontend
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Links](#links)
+  - [Link URL](#link)
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
@@ -16,12 +16,14 @@ Users should be able to:
 
 ### Screenshot
 
-![desktop](https://user-images.githubusercontent.com/84649871/132993329-f1333997-293e-4417-9a77-85616a8a3a2e.png)
-![mobile](https://user-images.githubusercontent.com/84649871/132993322-5fec7ab8-6b47-4fdb-afe3-0074c369b818.png)
+![desktop](https://user-images.githubusercontent.com/84649871/133915574-ddb3231c-5faa-4f7c-a400-d0348bd2bfe7.png)
+![mobile](https://user-images.githubusercontent.com/84649871/133915575-644d0eed-3a38-4f49-8993-f0ca80cdd7d4.png)
 
-### Links
+
+### Link
 
 - Live Site URL: [click here](https://ted-dino.github.io/Frontend-Mentor/Three%20Column%20Preview%20Card/)
+
 ## My process
 ### Built with
 - Semantic HTML5 markup
