@@ -26,6 +26,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: var(--lexend-deca);
+  background-color: #f2f2f2;
 }
 
 .container {
@@ -34,12 +35,17 @@ body {
   overflow: hidden;
 }
 
-.car {
+.card__image{
+  max-width: 100%;
+  height: auto;
+}
+
+.card {
   width: 18rem;
   padding: 28px 28px 50px 28px;
 }
 
-h1 {
+.card__title {
   font-family: var(--big-shoulders-display);
   font-weight: 900;
   color: var(--color-content);
@@ -47,14 +53,14 @@ h1 {
   text-transform: uppercase;
 }
 
-p {
+.card__body {
   padding-bottom: 40px;
   font-size: 15px;
   color: var(--paragraph);
   line-height: 1.5;
 }
 
-a {
+.card__link {
   padding: 10px 20px;
   text-decoration: none;
   font-size: 15px;
@@ -62,40 +68,43 @@ a {
   border-radius: 20px;
 }
 
-a:hover{
-  border: 2px solid var(--color-content);
-  background-color: transparent;
-  color: var(--color-content) !important;
-}
 
-.sedan {
+.card--orange {
   background-color: var(--bright-orange);
 }
 
-.sedan a {
+.card--orange .card__link {
   color: var(--bright-orange);
 }
 
-.suv {
+.card--dark--cyan {
   background-color: var(--dark-cyan);
 }
 
-.suv a{
+.card--dark--cyan .card__link{
   color: var(--dark-cyan);
 }
 
-.luxury {
+.card--darker--cyan {
   background-color: var(--darker-cyan);
 }
 
-.luxury a{
+.card--darker--cyan .card__link{
   color: var(--darker-cyan);
 }
+
+.card__link:hover{
+  color: var(--color-content);
+  border: 2px solid var(--color-content);
+  background-color: transparent;
+}
+
 
 @media (min-width: 865px) {
   body {
     height: 100vh;
   }
+  
   .container {
     margin: auto;
     display: flex;
@@ -103,15 +112,15 @@ a:hover{
     flex-wrap: wrap;
   }
 
-  h1{
+  .card{
+    padding: 28px 38px 50px;
+  }
+
+  .card__title{
     padding: 30px 0;
   }
 
-  p{
+  .card__body{
     padding-bottom: 100px;
-  }
-
-  .car{
-    padding: 28px 38px 50px;
   }
 }
