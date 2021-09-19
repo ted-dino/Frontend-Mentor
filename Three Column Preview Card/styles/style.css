@@ -13,7 +13,7 @@
   --big-shoulders-display: "Big Shoulders Display", cursive;
 }
 
-*, 
+*,
 *::before,
 *::after {
   margin: 0;
@@ -21,28 +21,97 @@
   box-sizing: border-box;
 }
 
-main {
+body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  font-family: var(--lexend-deca);
 }
 
-.container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+.container {
+  margin: 100px 0;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.card-container{
-  width: 300px;
-  border: 2px solid limegreen;
-  max-width: 500px;
+.car {
+  width: 18rem;
+  padding: 28px 28px 50px 28px;
 }
 
-.sedan{
+h1 {
+  font-family: var(--big-shoulders-display);
+  font-weight: 900;
+  color: var(--color-content);
+  padding: 15px 0;
+  text-transform: uppercase;
+}
+
+p {
+  padding-bottom: 40px;
+  font-size: 15px;
+  color: var(--paragraph);
+  line-height: 1.5;
+}
+
+a {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 15px;
+  background-color: var(--color-content);
+  border-radius: 20px;
+}
+
+a:hover{
+  border: 2px solid var(--color-content);
+  background-color: transparent;
+  color: var(--color-content) !important;
+}
+
+.sedan {
   background-color: var(--bright-orange);
 }
 
+.sedan a {
+  color: var(--bright-orange);
+}
+
+.suv {
+  background-color: var(--dark-cyan);
+}
+
+.suv a{
+  color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--darker-cyan);
+}
+
+.luxury a{
+  color: var(--darker-cyan);
+}
+
+@media (min-width: 865px) {
+  body {
+    height: 100vh;
+  }
+  .container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  h1{
+    padding: 30px 0;
+  }
+
+  p{
+    padding-bottom: 100px;
+  }
+
+  .car{
+    padding: 28px 38px 50px;
+  }
+}
