@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style/styles.css">
-  
+  <link rel="stylesheet" href="./style/styles.css">
   <title>Frontend Mentor | Profile card component</title>
+
 </head>
+
 <body>
 
-  <div>
-    <img class="top" src="images/bg-pattern-top.svg" alt="">
-    <img class="bottom" src="images/bg-pattern-bottom.svg" alt="">          
-  </div>
-  
   <main class="container">
 
+    <img src="./images/bg-pattern-card.svg" alt="">
 
-    <div><img src="images/bg-pattern-card.svg" alt=""></div>
-    
     <section class="profile">
-      <img src="images/image-victor.jpg" alt="">
-      <p>
-        <h1 class="name">Victor Crest <span class="age">26</span> </h1>
-        <span class="country">London</span>
-      </p>
+      <img class="profile__image" src="./images/image-victor.jpg" alt="">
+      <h1 class="profile__name">Victor Crest <span>26</span></h1>
+      <p class="profile__country">London</p>
     </section>
-
-
     <section class="stats">
-
       <div class="stat">
-        <h2>80K</h2>
-        <span>Followers</span>      
+        <ul>
+          <li class="stat__count">80K</li>
+          <li class="stat__type">Followers</li>
+        </ul>
       </div>
-
       <div class="stat">
-        <h2>803K</h2>
-        <span>Likes</span>        
+        <ul>
+          <li class="stat__count">803K</li>
+          <li class="stat__type">Likes</li>
+        </ul>
       </div>
-
       <div class="stat">
-        <h2>1.4K</h2>
-        <span>Photos</span>       
+        <ul>
+          <li class="stat__count">1.4K</li>
+          <li class="stat__type">Photos</li>
+        </ul>
       </div>
 
     </section>
@@ -51,4 +48,5 @@
   </main>
 
 </body>
+
 </html>
