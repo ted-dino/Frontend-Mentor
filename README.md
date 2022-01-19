@@ -1,1 +1,1 @@
-This is where all my projects on Frontend Mentor are placed.
+Gain real experience of building websites and providing code reviews. Build your portfolio and help others achieve their goals.
