@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Click me](https://www.frontendmentor.io/solutions/it-aint-much-but-its-an-honest-work-cQ_GTxi45)
 - Live Site URL: [Click me](https://ted-dino.github.io/Frontend-Mentor/Social%20Proof%20Section/)
 
 ## My process
