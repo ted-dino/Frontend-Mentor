@@ -1,0 +1,24 @@
+:root {
+  --dark-blue: hsl(238, 29%, 16%);
+  --dark-gray-blue: hsl(240, 6%, 50%);
+  --light-gray-blue: hsl(240, 5%, 91%);
+  --gray-blue: hsl(237, 12%, 33%);
+  --soft-red: hsl(14, 88%, 65%);
+  --soft-blue: hsl(240, 73%, 65%);
+  --soft-violet: hsl(273, 75%, 66%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: "Kumbh Sans", sans-serif;
+}
