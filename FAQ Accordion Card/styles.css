@@ -1,24 +1,109 @@
 :root {
-  --dark-blue: hsl(238, 29%, 16%);
-  --dark-gray-blue: hsl(240, 6%, 50%);
-  --light-gray-blue: hsl(240, 5%, 91%);
-  --gray-blue: hsl(237, 12%, 33%);
-  --soft-red: hsl(14, 88%, 65%);
-  --soft-blue: hsl(240, 73%, 65%);
-  --soft-violet: hsl(273, 75%, 66%);
+  --clr-primary-blue: hsl(238, 29%, 16%);
+  --clr-primary-red: hsl(14, 88%, 65%);
+
+  --violet-background: hsl(273, 75%, 66%);
+  --blue-background: hsl(240, 73%, 65%);
+
+  --neutral-darker-blue: hsl(237, 12%, 33%);
+  --neutral-dark-blue: hsl(240, 6%, 50%);
+
+  --divider: hsl(240, 5%, 91%);
 }
 
+/* CSS RESET LINK: https://piccalil.li/blog/a-modern-css-reset/ */
+/* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Remove default margin */
 * {
   margin: 0;
 }
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
 body {
   min-height: 100vh;
+  text-rendering: optimizeSpeed;
   line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+button {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+body {
+  background-image: linear-gradient(
+    var(--violet-background),
+    var(--blue-background)
+  );
   font-family: "Kumbh Sans", sans-serif;
+  place-items: center;
+}
+
+.card {
+  margin: auto;
+  padding: 4.25rem 0;
+  width: min(90%, 57.4375rem);
+  background-color: #fff;
+  border-radius: 1.5rem;
+  flex-direction: column;
+}
+
+.card__image img {
+  max-width: 27.5rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--divider);
 }
