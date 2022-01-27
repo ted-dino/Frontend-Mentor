@@ -75,35 +75,67 @@ button {
   }
 }
 
-.flex {
-  display: flex;
-  align-items: center;
-}
-
 body {
+  margin: auto 0;
   background-image: linear-gradient(
     var(--violet-background),
     var(--blue-background)
   );
   font-family: "Kumbh Sans", sans-serif;
-  place-items: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
 }
 
 .card {
+  position: relative;
   margin: auto;
   padding: 4.25rem 0;
-  width: min(90%, 57.4375rem);
+  width: min(90%, 57.6875rem);
   background-color: #fff;
   border-radius: 1.5rem;
   flex-direction: column;
 }
 
+.card__box {
+  display: none;
+}
+
+.card__image {
+  overflow: hidden;
+}
+
 .card__image img {
-  max-width: 27.5rem;
-  aspect-ratio: 1/1;
-  object-fit: cover;
+  max-width: 15rem;
+  height: auto;
 }
 
 .accordion-item {
   border-bottom: 1px solid var(--divider);
+}
+
+/* DESKTOP STYLES */
+@media (min-width: 56.25rem) {
+  .card {
+    flex-direction: row;
+    gap: 90px;
+  }
+
+  .card__box {
+    display: block;
+    position: absolute;
+    left: -93px;
+    top: 337.5px;
+  }
+
+  .card__image img {
+    max-width: 27.5rem;
+    margin-left: -4.375rem;
+  }
+
+  .accordion {
+    max-width: 360px;
+  }
 }
