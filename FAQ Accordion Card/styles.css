@@ -48,9 +48,7 @@ a:not([class]) {
 }
 
 /* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
+img {
   display: block;
 }
 
@@ -76,7 +74,7 @@ button {
 }
 
 body {
-  margin: auto 0;
+  padding-top: 8.125rem;
   background-image: linear-gradient(
     var(--violet-background),
     var(--blue-background)
@@ -84,58 +82,117 @@ body {
   font-family: "Kumbh Sans", sans-serif;
 }
 
-.flex {
-  display: flex;
-  align-items: center;
+.grid {
+  display: grid;
+  grid-template-areas: "accordion-image" "accordion";
 }
 
-.card {
-  position: relative;
-  margin: auto;
-  padding: 4.25rem 0;
-  width: min(90%, 57.6875rem);
+#card {
+  margin-inline: auto;
+  width: min(90%, 21rem);
   background-color: #fff;
-  border-radius: 1.5rem;
-  flex-direction: column;
+  border-radius: 1.25rem;
+
+  position: relative;
 }
 
+.card__image {
+  grid-area: accordion-image;
+  overflow: hidden;
+}
+.card__image img {
+  width: 100%;
+}
 .card__box {
   display: none;
 }
 
-.card__image {
-  overflow: hidden;
-}
-
-.card__image img {
-  max-width: 15rem;
-  height: auto;
+.accordion {
+  grid-area: accordion;
 }
 
 .accordion-item {
   border-bottom: 1px solid var(--divider);
+  max-width: 24rem;
+}
+
+.accordion-item button[aria-expanded="true"] {
+  border-bottom: 1px solid var(--divider);
+}
+
+button[aria-expanded="true"] .accordion-title {
+  font-weight: bold;
+}
+
+button {
+  width: 100%;
+  padding: 1em 0;
+  position: relative;
+  text-align: left;
+  color: var(--neutral-darker-blue);
+
+  border: none;
+  background: none;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+  color: var(--clr-primary-red);
+}
+
+.accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+
+button[aria-expanded="true"] + .accordion-content {
+  opacity: 1;
+  max-height: 6rem;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion-content .accordion-answer {
+  font-size: 1rem;
+  margin: 1rem 0;
+  color: var(--neutral-dark-blue);
+}
+
+.accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
 }
 
 /* DESKTOP STYLES */
 @media (min-width: 56.25rem) {
-  .card {
-    flex-direction: row;
-    gap: 90px;
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "accordion-image accordion";
   }
-
+  #card {
+    padding-block: 4rem;
+    width: min(90%, 59rem);
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: -546px -294px;
+  }
+  .card__image img {
+    margin-left: -5rem;
+    width: 30rem;
+  }
   .card__box {
     display: block;
     position: absolute;
-    left: -93px;
-    top: 337.5px;
+    top: 13rem;
+    left: -6rem;
   }
-
-  .card__image img {
-    max-width: 27.5rem;
-    margin-left: -4.375rem;
-  }
-
-  .accordion {
-    max-width: 360px;
+  .icon {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 30px;
   }
 }
