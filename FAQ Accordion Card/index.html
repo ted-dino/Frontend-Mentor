@@ -28,11 +28,21 @@
         />
       </div>
       <div class="card__image">
-        <img
-          src="./images/illustration-woman-online-desktop.svg"
-          aria-hidden="true"
-          alt=""
-        />
+        <picture>
+          <source
+            media="(min-width: 900px)"
+            srcset="./images/illustration-woman-online-desktop.svg"
+          />
+          <source
+            media="(max-width: 899px)"
+            srcset="./images/illustration-woman-online-mobile.svg"
+          />
+          <img
+            src="./images/illustration-woman-online-mobile.svg"
+            aria-hidden="true"
+            alt=""
+          />
+        </picture>
       </div>
 
       <div class="accordion">

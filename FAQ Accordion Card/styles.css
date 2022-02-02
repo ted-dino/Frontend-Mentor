@@ -48,7 +48,8 @@ a:not([class]) {
 }
 
 /* Make images easier to work with */
-img {
+img,
+picture {
   display: block;
 }
 
@@ -92,23 +93,34 @@ body {
   width: min(90%, 21rem);
   background-color: #fff;
   border-radius: 1.25rem;
-
+  background-image: url(./images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
   position: relative;
 }
 
 .card__image {
+  margin-top: -6.75rem;
   grid-area: accordion-image;
-  overflow: hidden;
 }
-.card__image img {
+.card__image picture {
+  margin-inline: auto;
   width: 100%;
+  max-width: 15rem;
+  height: auto;
 }
 .card__box {
   display: none;
 }
 
 .accordion {
+  margin-top: 3.4375rem;
   grid-area: accordion;
+  padding-inline: 1.75rem;
+}
+
+.accordion h1 {
+  text-align: center;
 }
 
 .accordion-item {
@@ -142,7 +154,7 @@ button:hover {
 }
 
 .accordion-title {
-  padding: 1em 1.5em 1em 0;
+  font-size: 14px;
 }
 
 button[aria-expanded="true"] + .accordion-content {
@@ -151,9 +163,16 @@ button[aria-expanded="true"] + .accordion-content {
   transition: all 200ms linear;
   will-change: opacity, max-height;
 }
+button .icon {
+  transition: 500ms ease;
+}
+
+button[aria-expanded="true"] .icon {
+  transform: rotate(180deg);
+}
 
 .accordion-content .accordion-answer {
-  font-size: 1rem;
+  font-size: 0.875rem;
   margin: 1rem 0;
   color: var(--neutral-dark-blue);
 }
@@ -164,6 +183,12 @@ button[aria-expanded="true"] + .accordion-content {
   overflow: hidden;
   transition: opacity 200ms linear, max-height 200ms linear;
   will-change: opacity, max-height;
+}
+.icon {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 30px;
 }
 
 /* DESKTOP STYLES */
@@ -179,7 +204,11 @@ button[aria-expanded="true"] + .accordion-content {
     background-repeat: no-repeat;
     background-position: -546px -294px;
   }
-  .card__image img {
+  .card__image {
+    margin: 0;
+    overflow: hidden;
+  }
+  .card__image picture {
     margin-left: -5rem;
     width: 30rem;
   }
@@ -189,10 +218,12 @@ button[aria-expanded="true"] + .accordion-content {
     top: 13rem;
     left: -6rem;
   }
-  .icon {
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    top: 30px;
+
+  .accordion h1 {
+    text-align: start;
+  }
+  .accordion-title,
+  .accordion-content .accordion-answer {
+    font-size: 18px;
   }
 }
