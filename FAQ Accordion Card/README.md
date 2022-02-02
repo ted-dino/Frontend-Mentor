@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Click Me](https://www.frontendmentor.io/solutions/faq-accordion-card-60aCVWui1)
 - Live Site URL: [Click Me](https://ted-dino.github.io/Frontend-Mentor/FAQ%20Accordion%20Card/)
 
 ## My process
