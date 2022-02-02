@@ -45,7 +45,7 @@ Users should be able to:
 
 ### What I learned
 
-By completing this challenge I learned a new HTML tag called picture tag.
+By completing this challenge I learned a new HTML tag called picture tag and a CSS property called will-change.
 
 ## Author
 
