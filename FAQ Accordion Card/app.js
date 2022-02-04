@@ -5,7 +5,6 @@ function toggleAccordion() {
 
   for (let i = 0; i < items.length; i++) {
     items[i].setAttribute("aria-expanded", "false");
-    items[i].setAttribute("aria-expanded", "false");
   }
 
   if (itemToggle == "false") {
