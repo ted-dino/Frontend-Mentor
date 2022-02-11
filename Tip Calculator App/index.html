@@ -19,11 +19,45 @@
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    <main>
-      <h1>SPLI <br />TTER</h1>
+    <div>
+      <img src="./images/logo.svg" aria-hidden="true" alt="" />
+    </div>
+
+    <main id="container">
+      <div class="left-side">
+        <div class="bill">
+          <label for="bill-input">Bill</label>
+          <input type="text" name="bill-input" placeholder="0" />
+        </div>
+
+        <div class="tip">
+          <span>Select Tip %</span>
+          <button value="0.05">5%</button>
+          <button value="0.1">10%</button>
+          <button value="0.15">15%</button>
+          <button value="0.25">25%</button>
+          <button value="0.50">50%</button>
+          <input type="text" value="0" />
+        </div>
+
+        <div class="size">
+          <label for="quantity-input">Number of People</label>
+          <input type="text" name="quantity-input" placeholder="0" />
+        </div>
+      </div>
+
+      <form class="right-side">
+        <div class="tip-amount d-flex">
+          <span>Tip Amount <span>/ person</span> </span>
+          <span id="amount">$4.47</span>
+        </div>
+        <div class="total-amount d-flex">
+          <span>Total <span>/ person</span> </span>
+          <h1>$32.79</h1>
+        </div>
+        <button type="reset">RESET</button>
+      </form>
     </main>
-    Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-    person Total / person Reset
 
     <!-- <div class="attribution">
       Challenge by

@@ -22,6 +22,11 @@ input {
   font: inherit;
 }
 
+span,
+label {
+  display: block;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
@@ -39,19 +44,74 @@ input {
   }
 }
 
-:root {
-  --clr-primary: hsl(172, 67%, 45%);
-  --dark-cyan: hsl(183, 100%, 15%);
-  --dark-grayish-cyan: hsl(186, 14%, 43%);
-  --darker-grayish-cyan: hsl(184, 14%, 56%);
-  --light-grayish-cyan: hsl(185, 41%, 84%);
-  --lighter-grayish-cyan: hsl(189, 41%, 97%);
-  --white: hsl(0, 0%, 100%);
-  --ff-regular: 1.5rem;
-}
-
 body {
   font-family: "Space Mono", monospace;
-  background-color: var(--light-grayish-cyan);
+  background-color: #c5e4e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+label,
+span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #5e7a7d;
+}
+
+input {
+  background-color: #c5e4e7;
+  border: 0;
+  outline: 0;
+  text-align: right;
+}
+
+img {
+  margin-bottom: 2.625rem;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container {
+  padding: 1.875rem;
+  width: calc(min(90%, 45rem));
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  background-color: white;
+  border-radius: 0.8125rem;
+  gap: 1.25rem;
+}
+
+#container .left-side .tip {
+  margin-block: 2.1875rem;
+}
+
+#container .right-side {
+  padding: 1.875rem;
+  font-size: 1.5rem;
+  background-color: #00494d;
+  border-radius: 0.8125rem;
 }
 /*# sourceMappingURL=index.css.map */
